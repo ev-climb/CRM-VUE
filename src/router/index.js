@@ -1,29 +1,69 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/",
+    name: "home",
+    meta: { layout: "main" },
+    component: () => import("@/views/HomePage.vue"),
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+    path: "/login",
+    name: "login",
+    meta: { layout: "empty" },
+    component: () => import("@/views/LoginPage.vue"),
+  },
+  {
+    path: "/register",
+    name: "register",
+    meta: { layout: "empty" },
+    component: () => import("@/views/RegisterPage.vue"),
+  },
+  {
+    path: "/categories",
+    name: "categories",
+    meta: { layout: "main" },
+    component: () => import("@/views/CategoriesPage.vue"),
+  },
+  {
+    path: "/ditail",
+    name: "ditail",
+    meta: { layout: "main" },
+    component: () => import("@/views/DitailRecordPage.vue"),
+  },
+  {
+    path: "/history",
+    name: "history",
+    meta: { layout: "main" },
+    component: () => import("@/views/HistoryPage.vue"),
+  },
+  {
+    path: "/planning",
+    name: "planning",
+    meta: { layout: "main" },
+    component: () => import("@/views/PlanningPage.vue"),
+  },
+  {
+    path: "/profile",
+    name: "profile",
+    meta: { layout: "main" },
+    component: () => import("@/views/ProfilePage.vue"),
+  },
+  {
+    path: "/record",
+    name: "record",
+    meta: { layout: "main" },
+    component: () => import("@/views/RecordPage.vue"),
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

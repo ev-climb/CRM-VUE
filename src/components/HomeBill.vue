@@ -5,7 +5,7 @@
         <span class="card-title">Счет в валюте</span>
 
         <p v-for="currency in currencies" :key="currency" class="currency-line">
-          <span>{{ getCurrency(currency) }}</span>
+          <span>{{ getCurrency(currency) | currency(currency) }}</span>
         </p>
       </div>
     </div>
@@ -16,17 +16,15 @@
   export default {
     props: ['rates'],
     data: () => ({
-      currencies: ['USD', 'TRY', 'RUB'],
+      currencies: ['RUB', 'USD', 'TRY'],
     }),
     computed: {
       base() {
-        return this.$store.getters.info.bill / (this.rates['RUB'] / this.rates['USD']);
+        return this.$store.getters.info.bill / this.rates['RUB'];
       },
     },
     methods: {
       getCurrency(currency) {
-        console.log(this.base);
-
         return Math.floor(this.base * this.rates[currency]);
       },
     },

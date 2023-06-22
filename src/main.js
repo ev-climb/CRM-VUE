@@ -4,6 +4,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import dateFilter from './filters/date.filter';
+import currencyFilter from './filters/currency.filter';
 import messagePlagin from './utils/message.plagin';
 import Loader from '@/components/app/Loader';
 import 'materialize-css/dist/js/materialize.min';
@@ -16,6 +17,7 @@ Vue.config.productionTip = false;
 
 Vue.use(messagePlagin);
 Vue.filter('date', dateFilter);
+Vue.filter('currency', currencyFilter);
 Vue.use(Vuelidate);
 Vue.component('Loader', Loader);
 

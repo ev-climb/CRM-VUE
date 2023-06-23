@@ -15,9 +15,6 @@
           </thead>
 
           <tbody>
-            {{
-              rates
-            }}
             <tr v-for="cur in currencies" :key="cur">
               <td>{{ cur }}</td>
               <td>{{ (rates['RUB'] / rates[cur]).toFixed(2) }}</td>

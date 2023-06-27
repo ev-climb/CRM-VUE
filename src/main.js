@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuelidate from 'vuelidate';
+import Paginate from 'vuejs-paginate';
 import App from './App.vue';
 import router from './router';
 import store from './store';
@@ -22,6 +23,7 @@ Vue.filter('currency', currencyFilter);
 Vue.use(Vuelidate);
 Vue.directive('tooltip', tooltipDirective);
 Vue.component('Loader', Loader);
+Vue.component('Paginate', Paginate);
 
 firebase.initializeApp({
   apiKey: 'AIzaSyC0O_-Ks6RyXYEfoHYmfOyCuA3pqztGT4k',

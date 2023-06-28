@@ -77,6 +77,9 @@
 
   export default {
     name: 'register',
+    metaInfo: {
+      title: 'Register | VUE-CRM',
+    },
     data: () => ({
       email: '',
       password: '',

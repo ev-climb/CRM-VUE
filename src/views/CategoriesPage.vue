@@ -23,6 +23,9 @@
   import CategoryEdit from '@/components/CategoryEdit.vue';
   export default {
     name: 'categories',
+    metaInfo: {
+      title: 'Categories | VUE-CRM',
+    },
     data: () => ({
       categories: [],
       loading: true,

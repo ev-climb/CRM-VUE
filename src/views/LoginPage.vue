@@ -60,6 +60,9 @@
 
   export default {
     name: 'login',
+    metaInfo: {
+      title: 'LogIn | VUE-CRM',
+    },
     data: () => ({
       email: '',
       password: '',

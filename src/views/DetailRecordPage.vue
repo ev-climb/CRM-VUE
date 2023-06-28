@@ -31,6 +31,9 @@
 <script>
   export default {
     name: 'detail',
+    metaInfo: {
+      title: 'Detail | VUE-CRM',
+    },
     data: () => ({
       record: null,
       loading: true,

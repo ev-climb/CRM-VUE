@@ -72,6 +72,9 @@
 
   export default {
     name: 'record',
+    metaInfo: {
+      title: 'Record | VUE-CRM',
+    },
     data: () => ({
       loading: true,
       select: null,

@@ -33,6 +33,9 @@
   import currencyFilter from '@/filters/currency.filter';
   export default {
     name: 'planning',
+    metaInfo: {
+      title: 'Planning | VUE-CRM',
+    },
     data: () => ({
       loading: true,
       categories: [],

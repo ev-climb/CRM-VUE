@@ -20,6 +20,9 @@
   import HomeCurrency from '@/components/HomeCurrency.vue';
   export default {
     name: 'home',
+    metaInfo: {
+      title: 'Home | VUE-CRM',
+    },
     data: () => ({
       loading: true,
       currency: null,
